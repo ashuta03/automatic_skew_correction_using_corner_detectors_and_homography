@@ -117,6 +117,7 @@ def example_one():
     un_warped = unwarp(image, np.float32(corners), destination)
     cropped = un_warped[0:h, 0:w]
     plt.imshow(cropped)
+    plt.title('Skew corrected rectangle')
     plt.show()
 
 
@@ -202,7 +203,7 @@ def detect_corners_from_contour(canvas, cnt):
     approx_corners = [approx_corners[i] for i in [0, 2, 1, 3]]
 
     plt.imshow(canvas)
-    plt.title('Corner Points')
+    plt.title('Corner Points: Douglas-Peucker')
     plt.show()
     return approx_corners
 
@@ -229,6 +230,7 @@ def example_two():
 
     cropped = un_warped[0:h, 0:w]
     plt.imshow(cropped)
+    plt.title('Skew corrected notebook')
     plt.show()
 
 
