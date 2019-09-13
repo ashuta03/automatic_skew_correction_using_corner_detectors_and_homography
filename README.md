@@ -26,8 +26,12 @@ I used the following two mechanisms of corner detection on image type 1 and imag
 - `cv2.warpPerspective()`
 
 ## Results 
-![](images/shi_tomashi_corners.png) ![](images/rectangle_unwarp.png)
-![](images/Douglas-Peucker.png) ![](images/unwarping_nb.png)
+
+### Corner Detection 
+![](images/shi_tomashi_corners.png) ![](images/Douglas-Peucker.png)
+
+### Skew Correction
+![](images/rectangle_unwarp.png) ![](images/unwarping_nb.png)
 
 ###### For a detailed explanation, refer to my medium article
 
