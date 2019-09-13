@@ -4,11 +4,15 @@ The python file contains a skew corrector for rectangle-like objects. I have use
 - Type 1: smooth with no interfering background (figure 1) 
 - Type 2: highly textured but more realistic image (figure 2) 
 
-![](images/example_1.png) 
-*figure 1*
+**Figure 1** 
+
+
+![](images/example_1.png)
+
+
+**Figure 2**
 
 ![](images/example_2.jpg)
-*figure 2*
 
 ## Corner Detectors
 
@@ -22,8 +26,8 @@ I used the following two mechanisms of corner detection on image type 1 and imag
 - `cv2.warpPerspective()`
 
 ## Results 
-![](images/corner_map.png) ![](images/shi_tomashi_corners.png) ![](images/rectangle_unwarp.png)
-![](images/filtered_notebook.png) ![](images/Douglas-Peucker.png) ![](images/unwarping_nb.png)
+![](images/shi_tomashi_corners.png) ![](images/rectangle_unwarp.png)
+![](images/Douglas-Peucker.png) ![](images/unwarping_nb.png)
 
 ###### For a detailed explanation, refer to my medium article
 
