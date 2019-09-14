@@ -93,7 +93,7 @@ def unwarp(img, src, dst):
     ax1.plot(x, y, color='yellow', linewidth=3)
     ax1.set_ylim([h, 0])
     ax1.set_xlim([0, w])
-    ax1.set_title('Targeted Area in Original Image')
+    ax1.set_title('Original Image')
     ax2.imshow(un_warped)
     ax2.set_title('Unwarped Image')
     plt.show()
