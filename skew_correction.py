@@ -86,16 +86,22 @@ def unwarp(img, src, dst):
 
     # plot
 
-    f, (ax1, ax2) = plt.subplots(1, 2)
+    f, (ax1, ax2, ax3) = plt.subplots(1, 3)
     ax1.imshow(img)
+    ax1.set_title('Original Image')
+
     x = [src[0][0], src[2][0], src[3][0], src[1][0], src[0][0]]
     y = [src[0][1], src[2][1], src[3][1], src[1][1], src[0][1]]
-    ax1.plot(x, y, color='yellow', linewidth=3)
-    ax1.set_ylim([h, 0])
-    ax1.set_xlim([0, w])
-    ax1.set_title('Original Image')
-    ax2.imshow(un_warped)
-    ax2.set_title('Unwarped Image')
+
+    ax2.imshow(img)
+    ax2.plot(x, y, color='yellow', linewidth=3)
+    ax2.set_ylim([h, 0])
+    ax2.set_xlim([0, w])
+    ax2.set_title('Target Area')
+
+    ax3.imshow(un_warped)
+    ax3.set_title('Skew Corrected Image')
+
     plt.show()
     return un_warped
 
