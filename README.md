@@ -17,10 +17,10 @@ I used the following two mechanisms of corner detection on image type 1 and imag
 
 ## Results 
 
+### Figure 1
 ![](images/results_im1.png) 
-
+### Figure 2
 ![](images/results_im2.png)
 
-//#### For a detailed explanation, refer to my medium article
 
 
