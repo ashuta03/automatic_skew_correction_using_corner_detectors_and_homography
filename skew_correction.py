@@ -86,7 +86,8 @@ def unwarp(img, src, dst):
 
     # plot
 
-    f, (ax1, ax2, ax3) = plt.subplots(1, 3)
+    f, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 8))
+    # f.subplots_adjust(hspace=.2, wspace=.05)
     ax1.imshow(img)
     ax1.set_title('Original Image')
 
@@ -98,9 +99,6 @@ def unwarp(img, src, dst):
     ax2.set_ylim([h, 0])
     ax2.set_xlim([0, w])
     ax2.set_title('Target Area')
-
-    ax3.imshow(un_warped)
-    ax3.set_title('Skew Corrected Image')
 
     plt.show()
     return un_warped
@@ -118,12 +116,18 @@ def example_one():
     plt.imshow(image)
     plt.title('Original Image')
     plt.show()
+
     corners = shi_tomashi(image)
     destination, h, w = get_destination_points(corners)
     un_warped = unwarp(image, np.float32(corners), destination)
     cropped = un_warped[0:h, 0:w]
-    plt.imshow(cropped)
-    plt.title('Skew corrected rectangle')
+
+    f, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 5), facecolor='w', edgecolor='k')
+    # f.subplots_adjust(hspace=.2, wspace=.05)
+
+    ax1.imshow(un_warped)
+    ax2.imshow(cropped)
+
     plt.show()
 
 
@@ -235,8 +239,11 @@ def example_two():
     un_warped = unwarp(image, np.float32(corners), destination_points)
 
     cropped = un_warped[0:h, 0:w]
-    plt.imshow(cropped)
-    plt.title('Skew corrected notebook')
+    f, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 8))
+    # f.subplots_adjust(hspace=.2, wspace=.05)
+    ax1.imshow(un_warped)
+    ax2.imshow(cropped)
+
     plt.show()
 
 
