@@ -1,4 +1,4 @@
-# Skew Correction Using Corner Detectors and Homography
+# Automatic Skew Correction Using Corner Detectors and Homography
 
 The python file contains a skew corrector for rectangle-like objects. I have used the skew corrector on two types images
 - Type 1: smooth with no interfering background 
