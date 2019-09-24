@@ -22,5 +22,5 @@ I used the following two mechanisms of corner detection on image type 1 and imag
 ### Figure 2
 ![](images/results_im2.png)
 
-
+For detailed explanation refer to my Medium blog: https://blog.ekbana.com/skew-correction-using-corner-detectors-and-homography-fda345e42e65
 
